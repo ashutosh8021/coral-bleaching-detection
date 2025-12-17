@@ -2,11 +2,20 @@
 
 A Streamlit web application for automated coral health monitoring using deep learning and visual explanations.
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://coral-bleaching-detection.streamlit.app/)
+
+## 🌐 Live Demo
+
+**Try it now:** [https://coral-bleaching-detection.streamlit.app/](https://coral-bleaching-detection.streamlit.app/)
+
 ![Coral Bleaching Detection](screenshots/image.png)
 
 ## 📋 Overview
 
-This application classifies coral images as **Bleached** or **Healthy** using a ResNet50 deep learning model and provides visual explanations through Grad-CAM heatmaps to show which regions of the image influenced the prediction.
+This application helps marine researchers and conservationists monitor coral reef health by:
+- Classifying coral images as **Bleached** or **Healthy** using a ResNet50 deep learning model
+- Providing **visual explanations** through Grad-CAM heatmaps showing which regions influenced the prediction
+- Offering **confidence scores** to assess prediction reliability
 
 ## ✨ Features
 
@@ -14,12 +23,18 @@ This application classifies coral images as **Bleached** or **Healthy** using a 
 - 🔍 **Binary Classification**: Identifies coral as Bleached or Healthy
 - 📊 **Confidence Scores**: Shows prediction confidence and class probabilities
 - 🔥 **Grad-CAM Visualization**: Heatmap overlay showing important image regions
-- 🎨 **Modern UI**: Clean, responsive interface with dark theme
+- 🎨 **Modern UI**: Clean, responsive interface with beautiful dark theme
+- ☁️ **Cloud Deployed**: Accessible anywhere via web browser
 
 ## 🚀 Installation
 
+### Quick Start (Online)
+
+No installation needed! Visit the live app: [https://coral-bleaching-detection.streamlit.app/](https://coral-bleaching-detection.streamlit.app/)
+
 ### Prerequisites
 
+For local installation:
 - Python 3.8 or higher
 - pip package manager
 
@@ -76,7 +91,7 @@ See `requirements.txt` for specific versions.
 
 ## 🧠 Model
 
-The application uses a **ResNet50** architecture pretrained and fine-tuned for coral bleaching detection. The model file (`coral_bleaching_resnet50_v1_1.pth`) contains the trained weights.
+The application uses a **ResNet50** architecture pretrained and fine-tuned for coral bleaching detection. The model file is stored using **Git LFS** for efficient version control.
 
 ### Grad-CAM
 
@@ -89,6 +104,7 @@ coral_streamlit_app/
 ├── app.py                              # Main Streamlit application
 ├── utils.py                            # Helper functions (model loading, prediction, Grad-CAM)
 ├── requirements.txt                    # Python dependencies
+├── packages.txt                        # System dependencies for deployment
 ├── coral_bleaching_resnet50_v1_1.pth  # Trained model weights
 ├── screenshots/                        # Application screenshots
 │   └── image.png
@@ -97,9 +113,16 @@ coral_streamlit_app/
 └── README.md                           # This file
 ```
 
+## 🚀 Deployment
+
+This app is deployed on **Streamlit Cloud** and uses:
+- Git LFS for large model file storage
+- System packages (libgl1-mesa-glx, libglib2.0-0) for OpenCV support
+- opencv-python-headless for server compatibility
+
 ## ⚠️ Disclaimer
 
-This is a **research prototype** for reef health monitoring. The predictions should not be used as the sole basis for critical decisions regarding coral reef conservation without expert validation.
+This is a **research prototype** for educational and research purposes. Predictions should not be used as the sole basis for critical decisions regarding coral reef conservation without expert validation.
 
 ## 🤝 Contributing
 
@@ -114,7 +137,8 @@ This project is open source and available under the MIT License.
 - ResNet50 architecture from PyTorch
 - Grad-CAM implementation from pytorch-grad-cam
 - Streamlit for the web framework
+- Deployed on Streamlit Community Cloud
 
 ---
 
-**Built with ❤️ for coral reef conservation**
+**Built with ❤️ for coral reef conservation | [View Live Demo](https://coral-bleaching-detection.streamlit.app/)**
